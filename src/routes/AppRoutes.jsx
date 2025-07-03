@@ -4,6 +4,8 @@ import RegisterPage from "../pages/RegisterPage";
 import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
 
+import Layout from "../components/Layout";
+
 import ProtectedRoutes from "../components/ProtectedRoutes";
 
 function AppRoutes() {
@@ -14,7 +16,9 @@ function AppRoutes() {
         path="/home"
         element={
           <ProtectedRoutes>
-            <HomePage />
+            <Layout>
+              <HomePage />
+            </Layout>
           </ProtectedRoutes>
         }
       />
